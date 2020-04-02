@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1Nu7ZGb9p3XgPMsnQXsfc0",
+    "name" : "AboitizObject",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "cokfRLdqcgm8lnC-gt-11105823-2019-11-27T01:03:47.7Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This lists out the columns in the Oracle Database as Objects",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

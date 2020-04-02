@@ -1,0 +1,192 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Yn5Smbduaa-gt-5623535-2019-11-27T01:03:48.076Z::pd.xml</types1:EntryId>
+      <types1:Name>GetData-AWSOracleRDS</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kmacatangay@informatica.com.cdpapj</types1:CreatedBy>
+      <types1:CreationDate>2019-11-27T01:03:48Z</types1:CreationDate>
+      <types1:ModifiedBy>kmacatangay@informatica.com.cdpapj</types1:ModifiedBy>
+      <types1:ModificationDate>2020-03-16T07:44:06Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>kmacatangay@informatica.com.cdpapj</types1:PublishedBy>
+      <types1:PublicationDate>2020-03-16T07:44:10Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.GetData-AWSOracleRDS/GetData-AWSOracleRDS.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="GetData-AWSOracleRDS"
+                  name="GetData-AWSOracleRDS"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="MeterAssignmentID" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="OutData" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AboitizObject</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1Nu7ZGb9p3XgPMsnQXsfc0</option>
+                  </options>
+               </field>
+               <field description="" name="OutMessage" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="METERASSIGNMENT_ID" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="GROSS_DATETIME" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="GROSS_LOAD_MW" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="NET_DATETIME" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="NET_LOAD_MW" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="STATION_USE_MWH" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="FREQUENCY_HZ" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="REACTIVE_POWER_MV" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="FREQUENCY_STATUS" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="CREATED_BY" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="CREATED_DATE" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="AboitizData" type="reference">
+                  <options>
+                     <option name="referenceTo">AWS-OracleRDS:ABOITIZDEMO</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">lv3MRLUq1KtdDlh8b7eR6d</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jxho2xva" targetId="jxhjmimh"/>
+               </start>
+               <assignment id="jxhjmimh">
+                  <title>Assignment to Data</title>
+                  <operation source="query" to="temp.AboitizData">
+                     <query advanceQuery="false" from="AWS-OracleRDS:ABOITIZDEMO">
+                        <where>METERASSIGNMENT_ID = {$input.MeterAssignmentID }</where>
+                     </query>
+                  </operation>
+                  <link id="jxhjmimy" targetId="jxhjmimx"/>
+               </assignment>
+               <container id="jxhjmimx" type="exclusive">
+                  <title>OutData</title>
+                  <flow id="jxhjmin1">
+                     <assignment id="jxhjmiom">
+                        <title>AssingmentToOutmessage</title>
+                        <operation source="constant" to="output.OutMessage">Meter Assignemtn ID Found!</operation>
+                        <operation source="constant" to="output.METERASSIGNMENT_ID"/>
+                        <operation source="field" to="output.GROSS_DATETIME">temp.AboitizData[1]/GROSS_DATETIME</operation>
+                        <operation source="field" to="output.GROSS_LOAD_MW">temp.AboitizData[1]/GROSS_LOAD_MW</operation>
+                        <operation source="field" to="output.NET_DATETIME">temp.AboitizData[1]/NET_DATETIME</operation>
+                        <operation source="field" to="output.NET_LOAD_MW">temp.AboitizData[1]/NET_LOAD_MW</operation>
+                        <operation source="field" to="output.STATION_USE_MWH">temp.AboitizData[1]/STATION_USE_MWH</operation>
+                        <operation source="field" to="output.FREQUENCY_HZ">temp.AboitizData[1]/FREQUENCY_HZ</operation>
+                        <operation source="field" to="output.REACTIVE_POWER_MV">temp.AboitizData[1]/REACTIVE_POWER_MV</operation>
+                        <operation source="field" to="output.FREQUENCY_STATUS">temp.AboitizData[1]/FREQUENCY_STATUS</operation>
+                        <operation source="field" to="output.CREATED_BY">temp.AboitizData[1]/CREATED_BY</operation>
+                        <operation source="field" to="output.CREATED_DATE">temp.AboitizData[1]/CREATED_DATE</operation>
+                     </assignment>
+                     <link id="jxhjmin2" targetId="jxhjmimx" type="containerLink"/>
+                  </flow>
+                  <flow id="jxhjmin4">
+                     <assignment id="jxhjminh">
+                        <title>NoData</title>
+                        <operation source="constant" to="output.OutMessage">{$input.MeterAssignmentID} not found!</operation>
+                     </assignment>
+                     <link id="jxhoxhhq" targetId="jxhjmimx" type="containerLink"/>
+                  </flow>
+                  <link id="jxhjmin0" targetId="jxhjmin1" type="containerLink">
+                     <condition source="formula">
+                        <function name="set">
+                           <arg name="field">{$temp.AboitizData}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jxhjmin3" targetId="jxhjmin4" type="containerLink">
+                     <condition source="formula">
+                        <function name="unset">
+                           <arg name="field">{$temp.AboitizData}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jxhjmimz" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>koaXBAIpSeicA8kFZsLPS2</types1:GUID>
+      <types1:DisplayName>GetData-AWSOracleRDS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-04-02T02:12:37.121Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

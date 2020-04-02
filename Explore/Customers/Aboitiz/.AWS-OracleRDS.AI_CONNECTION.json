@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "lv3MRLUq1KtdDlh8b7eR6d",
+    "name" : "AWS-OracleRDS",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "VV5aaabdqpw0VPN-gt-11105815-2019-11-27T01:03:47.666Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This is the OData Connector for an Oracle RDS in AWS to be used for Application Integration processes",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}
