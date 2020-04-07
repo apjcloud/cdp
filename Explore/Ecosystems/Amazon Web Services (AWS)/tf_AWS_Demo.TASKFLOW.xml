@@ -1,0 +1,233 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>H72yIYmWR7hsAVR-gt-10764976-2019-09-06T08:23:31.547Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_AWS_Demo</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>dhein@informatica.com.cdpapj</types1:CreatedBy>
+      <types1:CreationDate>2019-09-06T08:23:32Z</types1:CreationDate>
+      <types1:ModifiedBy>mkarozis@informatica.com.apjcdp</types1:ModifiedBy>
+      <types1:ModificationDate>2019-09-10T01:20:22Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>mkarozis@informatica.com.apjcdp</types1:PublishedBy>
+      <types1:PublicationDate>2019-09-10T01:09:14Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.Taskflow_Demo/Taskflow_Demo.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_AWS_Demo"
+                   name="tf_AWS_Demo">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Mapping Task Oracle to S3" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-Subquery-Oracle-to-S3</option>
+                  </options>
+               </field>
+               <field description="" name="Data Sync Salesforce to RDS" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ds-Salesforce-Account-to-AWS-Oracle-RDS</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="j3wgfeko" targetId="j3wgfekn"/>
+               </start>
+               <container id="j3wgfekn" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="j3wgfekr">
+                     <eventContainer id="k07unmaw">
+                        <service id="j3wgfel2">
+                           <title>Mapping Task Oracle to S3</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_Subquery_Oracle_to_S3</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">3fLezsgu135jRJ8F4iVNMU</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-Subquery-Oracle-to-S3">temp.Mapping Task Oracle to S3</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.Mapping Task Oracle to S3/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.Mapping Task Oracle to S3/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.Mapping Task Oracle to S3/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.Mapping Task Oracle to S3/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Mapping Task Oracle to S3/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <link id="k07unmc3" targetId="k07unmbw"/>
+                        <events>
+                           <catch faultField="temp.Mapping Task Oracle to S3/fault"
+                                  id="k07unmau"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Mapping Task Oracle to S3/fault"
+                                  id="k07unmav"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <container id="k07unmbw" type="exclusive">
+                        <title>Decision 1</title>
+                        <flow id="k07unmdr">
+                           <link id="k07unmds" targetId="k07unmbw" type="containerLink"/>
+                        </flow>
+                        <flow id="k07unmdt">
+                           <jumpTo id="k07unmfh">
+                              <link id="k07unmfi" targetId="k07unmaw"/>
+                           </jumpTo>
+                        </flow>
+                        <link id="k07unmdp" targetId="k07unmdr" type="containerLink">
+                           <condition source="formula">
+                              <function name="string-equals">
+                                 <arg name="left">{$temp.MappingTaskOracletoS3[1]/output[1]/Task_Status}</arg>
+                                 <arg name="right"/>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="k07unmdq" targetId="k07unmdt" type="containerLink"/>
+                     </container>
+                     <link id="j3wgfeks" targetId="j3wgfekn" type="containerLink"/>
+                  </flow>
+                  <flow id="j3wgfeku">
+                     <eventContainer id="k07unmb8">
+                        <service id="j3wgfelc">
+                           <title>Data Sync Salesforce to RDS</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">ds_Salesforce_Account_to_AWS_Oracle_RDS</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">5ZXH0E8DLMGlSVsZydfLCJ</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">SAAS_DSS</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="ds-Salesforce-Account-to-AWS-Oracle-RDS">temp.Data Sync Salesforce to RDS</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Data Sync Salesforce to RDS/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Data Sync Salesforce to RDS/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Data Sync Salesforce to RDS/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Data Sync Salesforce to RDS/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.Data Sync Salesforce to RDS/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.Data Sync Salesforce to RDS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.Data Sync Salesforce to RDS/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.Data Sync Salesforce to RDS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Data Sync Salesforce to RDS/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Data Sync Salesforce to RDS/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.Data Sync Salesforce to RDS/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="k07unmce">
+                           <link id="k07unmcf" targetId="k07unmb8" type="containerLink"/>
+                        </flow>
+                        <flow id="k07unmch">
+                           <end id="k07unmcl">
+                              <title>End</title>
+                           </end>
+                        </flow>
+                        <flow id="k07unmcs">
+                           <link id="k07unmct" targetId="k07unmb8" type="containerLink"/>
+                        </flow>
+                        <link id="k07unmcd" targetId="k07unmce" type="containerLink"/>
+                        <events>
+                           <timer id="k07unmcc">
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">1</arg>
+                                    <arg name="scale">M</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="k07unmcg" targetId="k07unmch" type="containerLink"/>
+                           </timer>
+                           <catch faultField="temp.Data Sync Salesforce to RDS/fault"
+                                  id="k07unmb6"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="k07unmcr" targetId="k07unmcs" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.Data Sync Salesforce to RDS/fault"
+                                  id="k07unmb7"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="j3wgfekv" targetId="j3wgfekn" type="containerLink"/>
+                  </flow>
+                  <link id="j3wgfekq" targetId="j3wgfekr" type="containerLink"/>
+                  <link id="k07unmbv" targetId="c"/>
+                  <link id="j3wgfekt" targetId="j3wgfeku" type="containerLink"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-Subquery-Oracle-to-S3"
+                              isByCopy="true"
+                              name="mt-Subquery-Oracle-to-S3">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="ds-Salesforce-Account-to-AWS-Oracle-RDS"
+                              isByCopy="true"
+                              name="ds-Salesforce-Account-to-AWS-Oracle-RDS">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>1uxRf9iOdexjrzfPdxwFcI</types1:GUID>
+      <types1:DisplayName>tf_AWS_Demo</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-04-07T04:04:07.751Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "7z0HqQTpz5adAOaVph5SCA",
+    "name" : "Ecosystems",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This project contains Ecosystem assets for AWS, Azure, GCP, Salesforce, and others. ",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

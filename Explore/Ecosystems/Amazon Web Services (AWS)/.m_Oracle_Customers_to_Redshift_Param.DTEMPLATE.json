@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "hZubltCukOpf1pzzhcARIB",
+    "name" : "m_Oracle_Customers_to_Redshift_Param",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105481700000000002Q"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Purpose: Demonstrate data integration between Oracle and AWS Redshift. The target table and field mapping have been parameterized. \nReset Required: Select the checkbox Truncate Target Table before execution (Mapping Task - Target - Advanced )\nEnvironment Scheduling Required: No",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "5m46AqsOygpbOay4Ui5zY3",
+    "name" : "AWS_Oracle_RDS_IICS",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480B00000000000L"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Oracle RDS on AWS Sydney",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "4tHZC7u8MbRgc5T5MR6wYE",
+    "name" : "AWS_Redshift",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480B000000000007"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

@@ -1,0 +1,70 @@
+{
+  "objectInfo" : {
+    "id" : "1uxRf9iOdexjrzfPdxwFcI",
+    "name" : "tf_AWS_Demo",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "H72yIYmWR7hsAVR-gt-10764976-2019-09-06T08:23:31.547Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "5ZXH0E8DLMGlSVsZydfLCJ",
+    "name" : "ds_Salesforce_Account_to_AWS_Oracle_RDS",
+    "type" : "DSS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480I00000000000J"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Data Synchronisation task that synchronizes data from Salesforce to AWS RDS Oracle DB",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Ecosystems/Amazon Web Services (AWS)"
+  }, {
+    "id" : "3fLezsgu135jRJ8F4iVNMU",
+    "name" : "mt_Subquery_Oracle_to_S3",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480Z00000000001E"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Ecosystems/Amazon Web Services (AWS)"
+  } ]
+}
