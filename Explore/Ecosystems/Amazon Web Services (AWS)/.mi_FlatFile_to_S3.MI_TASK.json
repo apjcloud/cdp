@@ -13,7 +13,7 @@
       },
       "contextAttributes" : [ ],
       "additionalInfo" : {
-        "description" : "Purpose: Demonstrate Mass Ingestion Task from Flat File source to Amazon S3\n",
+        "description" : "Purpose: Demonstrate Mass Ingestion Task from On premise Flat File source to Amazon S3\n",
         "contentType" : "Binary",
         "documentState" : "VALID"
       }
@@ -42,7 +42,7 @@
     "path" : "/SYS"
   }, {
     "id" : "6MKJLDxZWqUgwTkEW1GPIu",
-    "name" : "AWS_S3_V2",
+    "name" : "AWS-S3-v2-cloudintegration2-ANZ",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
