@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "aOLtYx3hKuRjgWTyFj7YOf",
+    "name" : "Cloud CDCI",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "CDCI Demo",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}
