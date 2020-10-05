@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "CICD Demo mapping - version 2: edit the mapping - Source FF (CSV)  Target ADLS Gen2 (CSV, create in runtime)\nCICD Demo mapping - version 1: create a new mapping - Source FF (CSV)  Target FF (CSV, create in runtime)",
+        "description" : "CICD Demo mapping - version 3: edit the mapping - Source ADLS Gen2 (CSV)  Target ADLS Gen2 (CSV, create in runtime)\nCICD Demo mapping - version 2: edit the mapping - Source FF (CSV)  Target ADLS Gen2 (CSV, create in runtime)\nCICD Demo mapping - version 1: create a new mapping - Source FF (CSV)  Target FF (CSV, create in runtime)",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
@@ -34,26 +34,6 @@
       },
       "repoInfo" : {
         "repoHandle" : "010TH50B000000000005"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : null,
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
-    "id" : "6j1VphbuewBd0XRzxTCrAk",
-    "name" : "SecureAgent-FlatFile-v1-IICSFiles-Source",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010TH50B000000000003"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
