@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "CICD Demo mapping - version 1: create a new mapping - Source FF (CSV)  Target FF (CSV, create in runtime)",
+        "description" : "CICD Demo mapping - version 2: edit the mapping - Source FF (CSV)  Target ADLS Gen2 (CSV, create in runtime)\nCICD Demo mapping - version 1: create a new mapping - Source FF (CSV)  Target FF (CSV, create in runtime)",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
@@ -24,8 +24,8 @@
   },
   "dataFileExtension" : "zip",
   "objectRefs" : [ {
-    "id" : "04QI179ly4ukwGXHgfwy4v",
-    "name" : "SecureAgent-FlatFile-v1-IICSFiles-Target",
+    "id" : "7A8pKb3NeauiUaT92yufII",
+    "name" : "ADLSGen2_Daniel",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -33,7 +33,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010TH50B000000000002"
+        "repoHandle" : "010TH50B000000000005"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
