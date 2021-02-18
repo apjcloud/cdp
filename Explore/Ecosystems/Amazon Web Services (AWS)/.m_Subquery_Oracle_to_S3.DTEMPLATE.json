@@ -25,7 +25,7 @@
   "dataFileExtension" : "zip",
   "objectRefs" : [ {
     "id" : "6MKJLDxZWqUgwTkEW1GPIu",
-    "name" : "AWS_S3_V2",
+    "name" : "AWS-S3-v2-cloudintegration2-ANZ",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -45,7 +45,7 @@
     "path" : "/SYS"
   }, {
     "id" : "5m46AqsOygpbOay4Ui5zY3",
-    "name" : "AWS_Oracle_RDS_IICS",
+    "name" : "AWS-Oracle-v1-RDS-IICS-ANZ",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
