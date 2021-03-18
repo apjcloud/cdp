@@ -1,0 +1,115 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>hNzUzeA8rJ4pbgc-gt-60494-2020-10-21T09:03:01.282Z::pd.xml</types1:EntryId>
+      <types1:Name>P_Tracking_SteveDemo</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:Main Windows Secure Agent,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>swong@informatica.com.cdpapj</types1:CreatedBy>
+      <types1:CreationDate>2020-10-21T09:03:01Z</types1:CreationDate>
+      <types1:ModifiedBy>swong@informatica.com.cdpapj</types1:ModifiedBy>
+      <types1:ModificationDate>2020-10-21T09:03:47Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>swong@informatica.com.cdpapj</types1:PublishedBy>
+      <types1:PublicationDate>2020-10-21T09:05:07Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.P_Tracking_SteveDemo/P_Tracking_SteveDemo.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="P_Tracking_SteveDemo"
+                  name="P_Tracking_SteveDemo"
+                  overrideAPIName="true">
+            <appliesTo/>
+            <description/>
+            <tags>.agent:Main Windows Secure Agent,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="i_id" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="status" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="t_potracker" type="reference">
+                  <options>
+                     <option name="referenceTo">C-Oracle-IICS-DB:POTRACKER</option>
+                     <option name="required">false</option>
+                     <option name="guid">4gr4RJU1OLgjmxQGlmjOYk</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <targetLocation>Main Windows Secure Agent</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jzj8wtyd" targetId="jzj8wtyc"/>
+               </start>
+               <assignment id="jzj8wtyc">
+                  <title>Query POTRACKER</title>
+                  <operation source="query" to="temp.t_potracker">
+                     <query advanceQuery="false" from="C-Oracle-IICS-DB:POTRACKER">
+                        <where>ID = {$input.i_id}</where>
+                     </query>
+                  </operation>
+                  <link id="jzj8wtys" targetId="jzj8wtyr"/>
+               </assignment>
+               <container id="jzj8wtyr" type="exclusive">
+                  <title>TRACKING AVAILABLE?</title>
+                  <flow id="jzj8wtyv">
+                     <assignment id="jzj8wtzk">
+                        <title>Set Status</title>
+                        <operation source="field" to="output.status">temp.t_potracker.SHIPPINGSTATUS</operation>
+                     </assignment>
+                     <link id="jzj8wtyw" targetId="jzj8wtyr" type="containerLink"/>
+                  </flow>
+                  <flow id="jzj8wtyy">
+                     <assignment id="jzj8wtzr">
+                        <title>Status Not Available</title>
+                        <operation source="constant" to="output.status">Shipping status not available, contact support.</operation>
+                     </assignment>
+                     <link id="jzj8wtyz" targetId="jzj8wtyr" type="containerLink"/>
+                  </flow>
+                  <link id="jzj8wtyu" targetId="jzj8wtyv" type="containerLink">
+                     <condition source="formula">
+                        <function name="set">
+                           <arg name="field">{$temp.t_potracker}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jzj8wtyx" targetId="jzj8wtyy" type="containerLink">
+                     <condition source="formula">
+                        <function name="unset">
+                           <arg name="field">{$temp.t_potracker}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jzj8wtyt" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>j8Lww9HFPIfe3W0k8r7aqn</types1:GUID>
+      <types1:DisplayName>P_Tracking_SteveDemo</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-03-18T03:42:02.92Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

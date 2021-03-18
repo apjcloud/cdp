@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "j8Lww9HFPIfe3W0k8r7aqn",
+    "name" : "P_Tracking_SteveDemo",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "hNzUzeA8rJ4pbgc-gt-60494-2020-10-21T09:03:01.282Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "4gr4RJU1OLgjmxQGlmjOYk",
+    "name" : "C-Oracle-IICS-DB",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "aabbfZk9EW4ARW8-gt-2005369-2019-08-16T00:55:32.011Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Cloud Application Integration/Connections"
+  } ]
+}
