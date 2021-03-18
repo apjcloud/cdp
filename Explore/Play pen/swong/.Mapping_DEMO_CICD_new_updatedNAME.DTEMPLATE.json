@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
     "id" : "5FCZyG3KwMfgdlYEuNFKKL",
-    "name" : "Mapping_DEMO_CICD_new",
+    "name" : "Mapping_DEMO_CICD_new_updatedNAME",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "#003 the name is changed back to original (new) for demo CICD in CDI - #003 and added an Expression as demo",
+        "description" : "#004 the name is updated again (new_updatedNAME) for demo CICD in CDI - #004 and added a Filter on top of 2 Tx before as a demo #004",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
