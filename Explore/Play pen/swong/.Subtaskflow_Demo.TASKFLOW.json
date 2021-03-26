@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "25mCJy1f2R1iXhZAxojHmz",
+    "name" : "Subtaskflow_Demo",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uRZXDyvs7xvk0qZ-gt-30034919-2021-03-26T09:29:10.327Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "8TbCe6fxFGwk2OLVJ9vzy2",
+    "name" : "MappingTask_DEMO_dependency_CICD",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480Z00000000016D"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Play pen/swong"
+  } ]
+}

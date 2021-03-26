@@ -1,0 +1,54 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>uslqAOclkZ2sBso-gt-29928981-2021-03-26T09:26:32.336Z::tf.xml</types1:EntryId>
+      <types1:Name>Taskflow_Subtaskflow_DEMO</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>swong@informatica.com.cdpapj</types1:CreatedBy>
+      <types1:CreationDate>2021-03-26T09:26:32Z</types1:CreationDate>
+      <types1:ModifiedBy>swong@informatica.com.cdpapj</types1:ModifiedBy>
+      <types1:ModificationDate>2021-03-26T09:29:26Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Taskflow_Subtaskflow_DEMO"
+                   name="Taskflow_Subtaskflow_DEMO"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kmq3nsfv" targetId="kmq3nsfu"/>
+               </start>
+               <subflow id="kmq3nsfu">
+                  <title>Subtaskflow_Demo</title>
+                  <subflowGUID>25mCJy1f2R1iXhZAxojHmz</subflowGUID>
+                  <subflowPath>Subtaskflow_Demo</subflowPath>
+                  <runForEach>false</runForEach>
+                  <input/>
+                  <outputDef/>
+                  <link id="kmq3nsfw" targetId="c"/>
+               </subflow>
+               <end id="c"/>
+            </flow>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>7BW79SOtY7QhNAeme6GlkQ</types1:GUID>
+      <types1:DisplayName>Taskflow_Subtaskflow_DEMO</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-03-26T09:58:05.441Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
