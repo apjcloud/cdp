@@ -40,5 +40,25 @@
       }
     },
     "path" : "/Explore/Play pen/swong"
+  }, {
+    "id" : "6VATeP84e6IfhctlX0U3Ml",
+    "name" : "FileMI_DEMO",
+    "type" : "MI_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "39951"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Play pen/swong"
   } ]
 }

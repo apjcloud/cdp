@@ -12,7 +12,8 @@
       <types1:ProcessGroup/>
       <types1:CreatedBy>swong@informatica.com.cdpapj</types1:CreatedBy>
       <types1:CreationDate>2021-03-26T09:29:10Z</types1:CreationDate>
-      <types1:ModifiedBy/>
+      <types1:ModifiedBy>swong@informatica.com.cdpapj</types1:ModifiedBy>
+      <types1:ModificationDate>2021-03-26T10:05:10Z</types1:ModificationDate>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -73,7 +74,7 @@
                         <operation source="field" to="temp.Data Task DEMO/output/Error_Message">Error Message</operation>
                      </serviceOutput>
                   </service>
-                  <link id="kmq3qklg" targetId="c"/>
+                  <link id="kmq50rnm" targetId="kmq50rnl"/>
                   <events>
                      <catch faultField="temp.Data Task DEMO/fault"
                             id="kmq3qkli"
@@ -87,6 +88,11 @@
                             name="warning"/>
                   </events>
                </eventContainer>
+               <assignment id="kmq50rnl">
+                  <title>Assignment TEST for check in v2</title>
+                  <operation source="constant" to="temp.Data Task DEMO[1]/output[1]/Object_Name">DEMO</operation>
+                  <link id="kmq50rnn" targetId="c"/>
+               </assignment>
                <end id="c"/>
             </flow>
             <dependencies>
@@ -110,5 +116,5 @@
       <types1:GUID>25mCJy1f2R1iXhZAxojHmz</types1:GUID>
       <types1:DisplayName>Subtaskflow_Demo</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2021-03-26T09:58:05.374Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2021-03-26T10:05:51.252Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

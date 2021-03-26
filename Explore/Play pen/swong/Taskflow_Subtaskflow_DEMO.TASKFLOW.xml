@@ -13,7 +13,7 @@
       <types1:CreatedBy>swong@informatica.com.cdpapj</types1:CreatedBy>
       <types1:CreationDate>2021-03-26T09:26:32Z</types1:CreationDate>
       <types1:ModifiedBy>swong@informatica.com.cdpapj</types1:ModifiedBy>
-      <types1:ModificationDate>2021-03-26T09:29:26Z</types1:ModificationDate>
+      <types1:ModificationDate>2021-03-26T10:04:04Z</types1:ModificationDate>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -26,6 +26,13 @@
             <description/>
             <tags/>
             <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Ingestion Task DEMO" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:FileMI-DEMO-6VATeP84e6IfhctlX0U3Ml</option>
+                  </options>
+               </field>
+            </tempFields>
             <notes/>
             <deployment suspendOnFault="false" tracingLevel="verbose">
                <rest/>
@@ -41,14 +48,67 @@
                   <runForEach>false</runForEach>
                   <input/>
                   <outputDef/>
-                  <link id="kmq3nsfw" targetId="c"/>
+                  <link id="kmq4zab2" targetId="kmq4zab4"/>
                </subflow>
+               <eventContainer id="kmq4zab4">
+                  <service id="kmq4zaax">
+                     <title>Ingestion Task DEMO</title>
+                     <serviceName>DIExecuteServiceTaskIngestionTaskImpl</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">FileMI_DEMO</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">6VATeP84e6IfhctlX0U3Ml</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MI_TASK</parameter>
+                        <parameter name="serviceProviderId" source="constant" updatable="true">filelistener</parameter>
+                        <parameter name="serviceProviderContextPath"
+                                   source="constant"
+                                   updatable="true">mitask/</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="FileMI-DEMO-6VATeP84e6IfhctlX0U3Ml">temp.Ingestion Task DEMO</operation>
+                           <operation source="constant"
+                                      to="FileMI-DEMO-6VATeP84e6IfhctlX0U3Ml/input[1]/CATEGORYGeneral[1]/sourceConnectionType">AdvancedSFTPV2</operation>
+                           <operation source="constant"
+                                      to="FileMI-DEMO-6VATeP84e6IfhctlX0U3Ml/input[1]/CATEGORYGeneral[1]/targetConnectionType">local</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Ingestion Task DEMO/output/successFiles">successFiles</operation>
+                        <operation source="field" to="temp.Ingestion Task DEMO/output/failedFiles">failedFiles</operation>
+                        <operation source="field" to="temp.Ingestion Task DEMO/output/fileDetails">fileDetails</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kmq4zaaz" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.Ingestion Task DEMO/fault"
+                            id="kmq4zab3"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                  </events>
+               </eventContainer>
                <end id="c"/>
             </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="FileMI-DEMO-6VATeP84e6IfhctlX0U3Ml"
+                              isByCopy="true"
+                              name="FileMI-DEMO-6VATeP84e6IfhctlX0U3Ml">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Fault" name="fault" type="reference"/>
+                     <field label="Input Parameters" name="input" type="reference"/>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
          </taskflow>
       </types1:Entry>
       <types1:GUID>7BW79SOtY7QhNAeme6GlkQ</types1:GUID>
       <types1:DisplayName>Taskflow_Subtaskflow_DEMO</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2021-03-26T09:58:05.441Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2021-03-26T10:05:51.72Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
