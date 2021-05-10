@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "30cFyYg1NcRfp26w0nyNwL",
+    "name" : "m_Oracle_Company_to_BigQuery",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105481700000000002F"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "aZhd47ggAkhhYkdsz5wmYC",
+    "name" : "AWS-Oracle-v1-RDS-CIH-ANZ",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480B00000000000C"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Oracle RDS, CIH Schema, available on AWS Sydney",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3yXbYWWIYyqhyjXDk5YwyV",
+    "name" : "Google-BigQuery-v2-apjcdp-TS",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480B0000000000HS"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Tom PDO testing dont touch",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

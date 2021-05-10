@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "0X0LmvetVs0bTWo8zm5FGd",
+    "name" : "m_Complex_Transforms_Salesforce_Accounts_to_BigQuery",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105481700000000002G"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Purpose: Demonstrate Advanced transformations example such as Regular Expression,  SQL functions and regular expressions. Source is Salesforce Account entity and target is GCP BigQuery. \nReset Required: Select the checkbox Truncate Target Table before execution (Mapping Task - Target - Advanced )\nEnvironment Scheduling Required: No\n",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "0sqcRTAU4LWiLS67xhBX2k",
+    "name" : "Google-BigQuery-v1-OzDataset-DH",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480B00000000000M"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "4G3u3iJGm5WggJCvGHlhIl",
+    "name" : "SalesForce-v1-APJCLOUD",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0105480B00000000000K"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}
