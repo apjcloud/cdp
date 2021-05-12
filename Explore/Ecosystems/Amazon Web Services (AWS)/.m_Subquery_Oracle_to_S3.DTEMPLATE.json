@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Purpose: Demonstrate how to easily use queries in your source objects. Source is Oracle and target is AWS S3\nReset Required: Select the checkbox Truncate Target Table before execution (Mapping Task - Target - Advanced ).\nEnvironment Scheduling Required: No.\nV0.7\n\n",
+        "description" : "Purpose: Demonstrate how to easily use queries in your source objects. Source is Oracle and target is AWS S3\nReset Required: Select the checkbox Truncate Target Table before execution (Mapping Task - Target - Advanced ).\nEnvironment Scheduling Required: No.\nV0.8\n\n",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
